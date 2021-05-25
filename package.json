@@ -18,6 +18,8 @@
     "wdio-chromedriver-service": "^7.1.0"
   },
   "dependencies": {
-    "chai": "^4.3.4"
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
   }
 }

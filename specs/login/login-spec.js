@@ -41,13 +41,8 @@ describe('User should be able to see items', () => {
         // Verify that each price is a number with a dollar sign in the front of it
         const productTitlePrice = [];
         productCardHeader.forEach(element => {
-            productTitlePrice.push({
-            productTitlePrice: element.$('[class="s-item__price"]').getText(),
+            expect(element.$('[class="s-item__price"]').getText()).to.be.include('$');
+            expect(parseInt(element.$('[class="s-item__price"]').getText())).to.be.a('number');
             })
         })
-        productTitlePrice.forEach(element => {
-            expect(element.productTitlePrice).to.be.include('$');
-            expect(parseInt(element.productTitlePrice)).to.be.a('number');
-        });
     })
-})
